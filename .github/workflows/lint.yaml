@@ -8,7 +8,9 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: SetupNodejs
-        uses: actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - name: install dependencies
         run: npm ci
       - name: run Linters
